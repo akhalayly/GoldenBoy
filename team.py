@@ -12,8 +12,8 @@ class Team:
         players = playerTable.find_all("a", class_="spielprofil_tooltip")[::2]
         playerValues = playerTable.find_all(class_="rechts hauptlink")
         newPlayerValues = [value.contents[0] for value in playerValues]
-        offensivePlayers = filter(isStrikerOrWinger, players)
-        offensivePlayersUrls = [BASE_URL + player["href"] for player in offensivePlayers]
+        # offensivePlayers = filter(isStrikerOrWinger, players)
+        offensivePlayersUrls = [BASE_URL + player["href"] for player in players]
         valueAndUrls = [(newPlayerValues[i], offensivePlayersUrls[i]) for i in range(len(offensivePlayersUrls))]
         # self.PlayerData = [PlayerProfile( playerUrl, scraper) for playerUrl in offensivePlayersUrls]
         self.PlayersData = []

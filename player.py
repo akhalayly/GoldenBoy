@@ -3,7 +3,7 @@ import re
 import pandas as pd
 
 CURRENT_YEAR = 17
-N_SEASON_HISTORY = 5 #change this to 6
+N_SEASON_HISTORY = 6
 
 
 class PlayerProfile:
@@ -33,18 +33,18 @@ class PlayerProfile:
 		if "Market Value" in playerAttributes:
 			if "\xa0" in playerAttributes["Market Value"]:
 				playerAttributes["Market Value"] = playerAttributes["Market Value"].replace("\xa0", " ")
-		if "position" in playerAttributes:
-			playerAttributes["position"] = "CF" if "Centre-Forward" in playerAttributes["position"] else "W"
+		# if "position" in playerAttributes:
+		# 	playerAttributes["position"] = "CF" if "Centre-Forward" in playerAttributes["position"] else "W"
 		if "age" in playerAttributes:
 			playerAttributes["age"] = int( playerAttributes["age"])
 
 		#scraping performance page information
 		soup = pageScraper(urlPerfPage)
-		performanceColumns = ("season", "games", "goals", "assists", "minutes")
+		performanceColumns = ("season", "games", "goals/conceded", "assists/clean", "minutes")
 		performanceRows = pd.DataFrame( {col:[] for col in performanceColumns})
 		for row in soup.find("div", class_="responsive-table").find("tbody").find_all("tr"):
 			#try:
-			rowContents = PlayerProfile.readRow( row)
+			rowContents = PlayerProfile.readRow(row, playerAttributes["position"])
 			#except:
 			#	 print( row)
 			#else:
@@ -74,13 +74,13 @@ class PlayerProfile:
 		return "< profile of %s >" % self.PlayerData["name"]
 
 	@staticmethod
-	def readRow( row):
+	def readRow(row, pos):
 		cells = row.find_all( "td")
 		cells = list( map( lambda x : x.text.strip(), cells))
 		year = cells[0]
 		games_played = cells[4]
-		goals_scored = cells[6]
-		assists = cells[7]
+		goals_scored = cells[6] if pos != "Goalkeeper" else cells[8]
+		assists = cells[7] if pos != "Goalkeeper" else cells[9]
 		minutes_played = cells[-1]
 		games_played = int(games_played) if games_played != "-" else 0
 		goals_scored = int(goals_scored) if goals_scored != "-" else 0
