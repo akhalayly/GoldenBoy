@@ -6,7 +6,7 @@ BASE_URL = "https://www.transfermarkt.co.uk"
 class League:
 	def __init__( self, name, url, scrapper):
 		self.LeagueName = name
-		soup = scrapper(url + "/plus/?saison_id=2017") #here we changed to season 17/18 for market value (and players)
+		soup = scrapper(url + "/plus/?saison_id=2011")
 		teamsTable = soup.find("table", class_="items")
 		teamUrls = teamsTable.find_all("a", class_="vereinprofil_tooltip", id=re.compile("\d+"))[::2]
 		teamUrls = [BASE_URL + teamUrl["href"] for teamUrl in teamUrls]

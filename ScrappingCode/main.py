@@ -38,7 +38,7 @@ if __name__ == "__main__":
     scraper = PageScraper()
     soup = scraper(LEAGUES_URL)
     LeagueTables = soup.find("table", class_="items").find("tbody")
-    Leagues = LeagueTables.find_all("a", href=re.compile("wettbewerb/[A-Z]{2}1"), title=re.compile("\w"))
+    Leagues = LeagueTables.find_all("a", href=re.compile("wettbewerb/[A-Z]*1"), title=re.compile("\w"))
     Leagues = Leagues[:N_LEAGUES]
     LeagueUrlDic = {league.text: BASE_URL + league["href"] for league in Leagues}
     LeaguesData = []
@@ -50,4 +50,4 @@ if __name__ == "__main__":
     PlayerProfiles = [player.PlayerData for league in LeaguesData for team in league.TeamsData for player in
                       team.PlayersData]
     df = pd.DataFrame(PlayerProfiles)
-    df.to_csv("StrikerPerformance2.csv", index=False)
+    df.to_csv("MarketValuesGoals11-12.csv", index=False)

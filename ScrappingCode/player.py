@@ -3,7 +3,7 @@ import re
 import pandas as pd
 
 CURRENT_YEAR = 17
-N_SEASON_HISTORY = 6
+N_SEASON_HISTORY = 7
 
 
 class PlayerProfile:
