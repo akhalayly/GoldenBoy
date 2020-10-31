@@ -1,0 +1,4 @@
+GoalKeeper:
+	Shot-stopping Goalkeeper, Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility
+
+	Sweeper keeper, First touch, Rushing Out, Anticipation, Creativity, Acceleration, Pace

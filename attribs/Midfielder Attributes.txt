@@ -1,0 +1,36 @@
+Midfielder: 
+
+	Defensive Midfielder defend, Marking,Tackling,Concentration,Decisions,Positioning,Teamwork,Work Rate,Acceleration,Stamina,Strength,concentration
+
+	Defensive Midfielder support, Marking,Tackling,Concentration,Decisions,Positioning,Teamwork,Work Rate,Acceleration,Stamina,Strength,passing
+
+	Anchorman,  Heading, Marking, Tackling, Anticipation, Concentration, Decisions, Determination, Positioning, Work Rate, Strength
+
+	Deep Lying Playmaker defend,  Passing, Tackling, Technique, Composure, Creativity, Decisions, Positioning, Teamwork, Strength, marking
+
+	Deep Lying Playmaker support,  Passing, Tackling, Technique, Composure, Creativity, Decisions, Positioning, Teamwork, Strength, first touch, off the ball
+
+	Centre Midfielder attack,  First Touch, Passing, Decisions, Determination, Positioning, Teamwork, Work Rate, Dribbling, Finishing, Long Shots, Creativity, Off the Ball
+
+	Centre Midfielder support,  First Touch, Passing, Decisions, Determination, Positioning, Teamwork, Work Rate, Long Shots, Marking, Tackling, Creativity, Off the Ball
+
+	Centre Midfielder defend,  First Touch, Passing, Decisions, Determination, Positioning, Teamwork, Work Rate, Heading, Marking, Tackling
+
+	Advanced Playmaker support,  First Touch, Passing, Technique, Creativity, Decisions, Flair, Teamwork, work rate, stamina
+
+	Advanced Playmaker attack,  First Touch, Passing, Technique, Creativity, Decisions, Flair, Teamwork, dribbling, anticipation, off the ball
+
+	Ball Winning Midfielder,  Marking, Tackling, Aggression, Bravery, Determination, Positioning, Teamwork, Work Rate, Stamina, Strength, passing
+
+	Box-to-Box Midfielder,  Dribbling, Finishing, First Touch, Heading, Long Shots, Marking, Passing, Technique, Anticipation, Bravery, Decisions, Determination, Off The Ball, Positioning, Work Rate, Acceleration, Stamina, Strength
+
+	Wide Midfielder,  Crossing, Passing, Tackling, Anticipation, Decisions, Determination, Off the Ball, Teamwork, Work Rate, Stamina
+
+	Attacking Midfielder,  First Touch, Passing, Technique, Creativity, Decisions, Flair, Off the Ball, Work Rate
+
+
+
+
+
+
+
