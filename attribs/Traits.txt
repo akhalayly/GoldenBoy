@@ -1,0 +1,31 @@
+ameDate,Name,UID,NationID,Born,Age,IntCaps,IntGoals,U21Caps,U21Goals,WorldReputation,HomeReputation,CurrentReputation,PA,CA,Price,Height,Weight,PositionsString,GK.AerialAbility,GK.CommandOfArea,GK.Communication,GK.Eccentricity,GK.Handling,GK.Kicking,GK.OneOnOnes,GK.Reflexes,GK.RushingOut,GK.TendencyToPunch,GK.Throwing,Tech.Corners,Tech.Crossing,Tech.Dribbling,Tech.Finishing,Tech.FirstTouch,Tech.Freekicks,Tech.Heading,Tech.LongShots,Tech.Longthrows,Tech.Marking,Tech.Passing,Tech.PenaltyTaking,Tech.Tackling,Tech.Technique,Mental.Aggression,Mental.Anticipation,Mental.Bravery,Mental.Composure,Mental.Concentration,Mental.Vision,Mental.Decisions,Mental.Determination,Mental.Flair,Mental.Leadership,Mental.OffTheBall,Mental.Positioning,Mental.Teamwork,Mental.Workrate,Phy.Acceleration,Phy.Agility,Phy.Balance,Phy.Jumping,Phy.LeftFoot,Phy.NaturalFitness,Phy.Pace,Phy.RightFoot,Phy.Stamina,Phy.Strength,Hidden.Consistency,Hidden.Dirtiness,Hidden.ImportantMatches,Hidden.InjuryProness,Hidden.Versatility,Personality.Adaptability,Personality.Ambition,Personality.Loyalty,Personality.Pressure,Personality.Professional,Personality.Sportsmanship,Personality.Temperament,Personality.Controversy,Positions.Defender,Positions.WingBack,Positions.Midfielder,Positions.AttackingMidfielder,Positions.Right,Positions.Left,Positions.Centre,Positions.PositionsDesc,Positions.PositionsDescVal,Positions.Goalkeeper,Positions.Sweeper,Positions.Striker,Positions.AttackingMidCentral,Positions.AttackingMidLeft,Positions.AttackingMidRight,Positions.DefenderCentral,Positions.DefenderLeft,Positions.DefenderRight,Positions.DefensiveMidfielder,Positions.MidfielderCentral,Positions.MidfielderLeft,Positions.MidfielderRight,Positions.WingBackLeft,Positions.WingBackRight,PPMVal,PPM0,PPM1,PPM2,PPM3,PPM4,PPM5,PPM6,PPM7,PPM8,PPM9,PPM10,PPM11,PPM12,PPM13,PPM14,PPM15,PPM16,PPM17,PPM18,PPM19,PPM20,PPM21,PPM22,PPM23,PPM24,PPM25,PPM26,PPM27,PPM28,PPM29,PPM30,PPM31,PPM32,PPM33,PPM34,PPM35,PPM36,PPM37,PPM38,PPM39,PPM40,PPM41,PPM42,PPM43,PPM44,PPM45,PPM46,PPM47
+
+
+Forward:
+	Targetman Support (ST) , First Touch, Heading, Aggression, Bravery, Determination, Teamwork, Work Rate, Jumping, Strength, Long shots
+	Targetman Attack (ST) , First Touch, Heading, Aggression, Bravery, Determination, Teamwork, Work Rate, Jumping, Strength, Finishing, Anticipation, Composure, Creativity
+	Poacher (ST) , Dribbling, Finishing, First Touch, Anticipation, Composure, Off The Ball, Acceleration, Agility, Balance, Pace
+	Complete Forward (ST) , Dribbling, Finishing, First Touch, Heading, Long Shots, Passing, Technique, Anticipation, Composure, Creativity, Decisions, Determination, Off The Ball, Teamwork, Acceleration, Agility, Balance, Jumping, Pace, Strength
+	Trequartista (CAM) , Finishing, First Touch, Passing, Technique, Anticipation, Composure, Creativity, Flair, Off the Ball, Agility
+	Advanced Forward (ST) , Dribbling, Finishing, Heading, Anticipation, Composure, Flair, Off the Ball, Work Rate, Pace
+	Inside Forward Support (RW/LW) , Dribbling, Passing, Decisions, Flair, Off the Ball, Teamwork, Acceleration, Pace, long shots, technique
+	Inside Forward Attack (RW/LW) , Dribbling, Passing, Decisions, Flair, Off the Ball, Teamwork, Acceleration, Pace, Crossing, finishing, creativity
+	Deep Lying Forward Support (ST) , Dribbling, First Touch, Passing, Technique, Creativity, Decisions, Off the Ball, Teamwork, Balance, Strength, Long shots
+	Deep Lying Forward Attack (ST) , Dribbling, First Touch, Passing, Technique, Creativity, Decisions, Off the Ball, Teamwork, Balance, Strength, Finishing, Anticipation and Composure
+	Winger (LW/RW) , Crossing, Dribbling, Technique, Decisions, Flair, Off the Ball, Acceleration, Agility, Balance, Pace
+Defenders:
+	Centre-Back Stopper (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, aggression, bravery
+	Centre-Back Cover (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, anticipation, acceleration, pace
+	Centre-Back Defend (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, teamwork
+	Ball playing defender Stopper (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, aggression, bravery
+	Ball playing defender Cover (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, anticipation, acceleration, pace
+	Ball playing defender Defend (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, teamwork
+	Limited Defender Stopper (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, aggression, bravery
+	Limited Defender Cover (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, anticipation, acceleration, pace
+	Limited Defender Defend (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, teamwork
+	Fullback Support (RB/LB) , Marking, Tackling, Decisions, Positioning, Teamwork, Work Rate, Acceleration, Pace, Stamina, crossing
+	Fullback Attack (RB/LB) , Marking, Tackling, Decisions, Positioning, Teamwork, Work Rate, Acceleration, Pace, Stamina, crossing, dribbling, passing, off the ball
+	Wingback Support (RB/LB) , Marking, Tackling, Anticipation, Concentration, Positioning, Teamwork, Work Rate, Acceleration, Pace, Stamina, crossing, passing
+	Wingback Attack (RB/LB) , Marking, Tackling, Anticipation, Concentration, Positioning, Teamwork, Work Rate, Acceleration, Pace, Stamina, crossing, passing , off the ball, dribbling
+	Libero (CB / CDM) , Dribbling, Heading, Marking, Passing, Tackling, Anticipation, Composure, Concentration, Creativity, Decisions, Positioning, Teamwork, Acceleration, Balance, Jumping
+	Sweeper (CB) , Heading, Marking, Passing, Tackling, Anticipation, Composure, Concentration, Decisions, Positioning, Acceleration, Balance, Jumping
