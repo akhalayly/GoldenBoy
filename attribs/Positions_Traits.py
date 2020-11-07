@@ -1,8 +1,8 @@
 TargetManSupport = ["First Touch", "Heading", "Aggression", "Bravery", "Determination", "Teamwork", "Work Rate",
-                    "Jumping", "Strength", "Long shots"]
+                    "Jumping", "Strength", "Long shots", "Dirtiness", "Height_2012"]
 
 TargetManAttack = ["First Touch", "Heading", "Aggression", "Bravery", "Determination", "Teamwork", "Work Rate",
-                   "Jumping", "Strength", "Finishing", "Anticipation", "Composure", "Vision"]
+                   "Jumping", "Strength", "Finishing", "Anticipation", "Composure", "Vision", "Dirtiness", "Height_2012"]
 
 Poacher = ["Dribbling", "Finishing", "First Touch", "Anticipation", "Composure", "Off The Ball", "Acceleration",
            "Agility", "Balance", "Pace"]
@@ -52,13 +52,14 @@ FullBackAttack = ["Marking", "Tackling", "Decisions", "Positioning", "Teamwork",
                   "Pace", "Stamina", "crossing", "dribbling", "passing", "off the ball"]
 
 CentreBackStopper = ["Heading", "Marking", "Tackling", "Composure", "Concentration", "Decisions",
-                     "Determination", "Positioning", "Jumping", "Strength", "aggression", "bravery"]
+                     "Determination", "Positioning", "Jumping", "Strength", "aggression", "bravery", "Dirtiness",
+                     "Height_2012"]
 
 CentreBackCover = ["Heading", "Marking", "Tackling", "Composure", "Concentration", "Decisions", "Determination",
-                   "Positioning", "Jumping", "Strength", "anticipation", "acceleration", "pace"]
+                   "Positioning", "Jumping", "Strength", "anticipation", "acceleration", "pace", "Dirtiness", "Height_2012"]
 
 CentreBackDefend = ["Heading", "Marking", "Tackling", "Composure", "Concentration", "Decisions", "Determination",
-                    "Positioning", "Jumping", "Strength", "teamwork"]
+                    "Positioning", "Jumping", "Strength", "teamwork", "Dirtiness", "Height_2012"]
 
 BallPlayingDefenderStopper = ["Aerial Ability", "Command of Area", "Communication", "Handling", "One on Ones",
                               "Reflexes", "Bravery", "Composure", "Concentration", "Decisions", "Positioning",
@@ -73,28 +74,28 @@ BallPlayingDefenderDefend = ["Aerial Ability", "Command of Area", "Communication
                              "Agility", "teamwork"]
 
 LimitedDefenderStopper = ["Heading", "Marking", "Tackling", "Determination", "Positioning", "Jumping",
-                          "Strength", "aggression", "bravery"]
+                          "Strength", "aggression", "bravery", "Dirtiness", "Height_2012"]
 
 LimitedDefenderCover = ["Heading", "Marking", "Tackling", "Determination", "Positioning", "Jumping", "Strength",
-                        "anticipation", "acceleration", "pace"]
+                        "anticipation", "acceleration", "pace", "Dirtiness", "Height_2012"]
 
 LimitedDefenderDefend = ["Heading", "Marking", "Tackling", "Determination", "Positioning", "Jumping", "Strength",
-                         "teamwork"]
+                         "teamwork", "Dirtiness", "Height_2012"]
 
 ShotStoppingGoalkeeper = ["Aerial Ability", "Command of Area", "Communication", "Handling", "One on Ones",
                           "Reflexes", "Bravery", "Composure", "Concentration", "Decisions", "Positioning",
-                          "Agility"]
+                          "Agility", "Height_2012"]
 
-SweeperKeeper = ["First touch", "Rushing Out", "Anticipation", "Vision", "Acceleration", "Pace"]
+SweeperKeeper = ["First touch", "Rushing Out", "Anticipation", "Vision", "Acceleration", "Pace", "Height_2012"]
 
 DefensiveMidfielderDefend = ["Marking", "Tackling", "Concentration", "Decisions", "Positioning", "Teamwork",
-                             "Work Rate", "Acceleration", "Stamina", "Strength", "concentration"]
+                             "Work Rate", "Acceleration", "Stamina", "Strength", "concentration", "Dirtiness", "Height_2012"]
 
 DefensiveMidfielderSupport = ["Marking", "Tackling", "Concentration", "Decisions", "Positioning", "Teamwork",
-                              "Work Rate", "Acceleration", "Stamina", "Strength", "passing"]
+                              "Work Rate", "Acceleration", "Stamina", "Strength", "passing", "Dirtiness", "Height_2012"]
 
 Anchorman = ["Heading", "Marking", "Tackling", "Anticipation", "Concentration", "Decisions", "Determination",
-             "Positioning", "Work Rate", "Strength"]
+             "Positioning", "Work Rate", "Strength", "Dirtiness", "Height_2012"]
 
 DeepLyingPlaymakerDefend = ["Passing", "Tackling", "Technique", "Composure", "Vision", "Decisions",
                             "Positioning", "Teamwork", "Strength", "marking"]
@@ -109,7 +110,7 @@ CentreMidfielderSupport = ["First Touch", "Passing", "Decisions", "Determination
                            "Work Rate", "Long Shots", "Marking", "Tackling", "Vision", "Off the Ball"]
 
 CentreMidfielderDefend = ["First Touch", "Passing", "Decisions", "Determination", "Positioning", "Teamwork",
-                          "Work Rate", "Heading", "Marking", "Tackling"]
+                          "Work Rate", "Heading", "Marking", "Tackling", "Dirtiness", "Height_2012"]
 
 AdvancedPlaymakerSupport = ["First Touch", "Passing", "Technique", "Vision", "Decisions", "Flair",
                             "Teamwork", "work rate", "stamina"]
@@ -118,7 +119,7 @@ AdvancedPlaymakerAttack = ["First Touch", "Passing", "Technique", "Vision", "Dec
                            "dribbling", "anticipation", "off the ball"]
 
 BallWinningMidfielder = ["Marking", "Tackling", "Aggression", "Bravery", "Determination", "Positioning",
-                         "Teamwork", "Work Rate", "Stamina", "Strength", "passing"]
+                         "Teamwork", "Work Rate", "Stamina", "Strength", "passing", "Dirtiness", "Height_2012"]
 
 BoxToBoxMidfielder = ["Dribbling", "Finishing", "First Touch", "Heading", "Long Shots", "Marking", "Passing",
                       "Technique", "Anticipation", "Bravery", "Decisions", "Determination", "Off The Ball",
@@ -146,6 +147,18 @@ Wingers = ["AdvancedPlaymakerAttack", "AdvancedPlaymakerSupport", "WideMidfielde
 Strikers = ["TargetManSupport", "TargetManAttack", "Poacher", "CompleteForward", "AdvancedForward",
             "DeepLyingForwardSupport", "DeepLyingForwardAttack"]
 
+allRoles = ["SweeperKeeper", "ShotStoppingGoalkeeper", "CentreBackCover", "CentreBackStopper", "CentreBackDefend",
+            "BallPlayingDefenderCover", "BallPlayingDefenderDefend", "BallPlayingDefenderStopper",
+            "LimitedDefenderCover", "LimitedDefenderDefend", "LimitedDefenderStopper", "Libero", "Sweeper",
+            "WingBackAttack",
+            "WingBackSupport", "FullBackAttack", "FullBackSupport", "DefensiveMidfielderDefend",
+            "DefensiveMidfielderSupport", "Anchorman", "BallWinningMidfielder", "DeepLyingPlaymakerDefend",
+            "DeepLyingPlaymakerSupport", "CentreMidfielderAttack", "CentreMidfielderSupport", "CentreMidfielderDefend",
+            "BoxToBoxMidfielder", "Trequartista", "AdvancedPlaymakerSupport", "AdvancedPlaymakerAttack",
+            "AttackingMidfielder", "WideMidfielder", "InsideForwardAttack", "InsideForwardSupport", "Winger",
+            "TargetManSupport", "TargetManAttack", "Poacher", "CompleteForward", "AdvancedForward",
+            "DeepLyingForwardSupport", "DeepLyingForwardAttack"]
+
 GKs_Traits = [SweeperKeeper, ShotStoppingGoalkeeper]
 CBs_Traits = [CentreBackCover, CentreBackStopper, CentreBackDefend, BallPlayingDefenderCover,
               BallPlayingDefenderDefend, BallPlayingDefenderStopper, LimitedDefenderCover, LimitedDefenderDefend,
@@ -163,7 +176,22 @@ Wingers_Traits = [AdvancedPlaymakerAttack, AdvancedPlaymakerSupport, WideMidfiel
 Strikers_Traits = [TargetManSupport, TargetManAttack, Poacher, CompleteForward, AdvancedForward,
                    DeepLyingForwardSupport, DeepLyingForwardAttack]
 
-traits_General = []
+allRoles_Traits = [SweeperKeeper, ShotStoppingGoalkeeper, CentreBackCover, CentreBackStopper, CentreBackDefend,
+                   BallPlayingDefenderCover, BallPlayingDefenderDefend, BallPlayingDefenderStopper,
+                   LimitedDefenderCover, LimitedDefenderDefend, LimitedDefenderStopper, Libero, Sweeper, WingBackAttack,
+                   WingBackSupport, FullBackAttack, FullBackSupport, DefensiveMidfielderDefend,
+                   DefensiveMidfielderSupport, Anchorman, BallWinningMidfielder, DeepLyingPlaymakerDefend,
+                   DeepLyingPlaymakerSupport, CentreMidfielderAttack, CentreMidfielderSupport, CentreMidfielderDefend,
+                   BoxToBoxMidfielder, Trequartista, AdvancedPlaymakerSupport, AdvancedPlaymakerAttack,
+                   AttackingMidfielder, WideMidfielder, InsideForwardAttack, InsideForwardSupport, Winger,
+                   TargetManSupport, TargetManAttack, Poacher, CompleteForward, AdvancedForward,
+                   DeepLyingForwardSupport, DeepLyingForwardAttack]
+
+
+Positive_Traits = ["Consistency", "ImportantMatches", "Adaptability", "Ambition", "Pressure", "Professional",
+                   "Temperament", "CA"]
+Negative_Traits = ["InjuryProness"]
+General_Info = ["Name", "NationID"]
 
 DatasetColumns = ["GameDate_2012", "Name_2012", "UID_2012", "NationID_2012", "Born_2012", "Age_2012", "IntCaps_2012",
                   "IntGoals_2012", "U21Caps_2012", "U21Goals_2012", "WorldReputation_2012", "HomeReputation_2012",
@@ -298,3 +326,212 @@ DatasetColumns = ["GameDate_2012", "Name_2012", "UID_2012", "NationID_2012", "Bo
                   "Personality.Pressure_2017", "Personality.Professional_2017", "Personality.Sportsmanship_2017",
                   "Personality.Temperament_2017", "Personality.Controversy_2017", "name_2017", "Market Value_2017",
                   "current league_2017"]
+
+NationsDict = {'106': 'Afghanistan',
+               '752': 'Albania',
+               '5': 'Algeria',
+               '129504': 'American Samoa',
+               '753': 'Andorra',
+               '6': 'Angola',
+               '129514': 'Anguilla',
+               '359': 'Antigua & Barbuda',
+               '1649': 'Argentina',
+               '754': 'Armenia',
+               '360': 'Aruba',
+               '1435': 'Australia',
+               '755': 'Austria',
+               '756': 'Azerbaijan',
+               '388': 'Bahamas',
+               '107': 'Bahrain',
+               '108': 'Bangladesh',
+               '361': 'Barbados',
+               '758': 'Belarus',
+               '757': 'Belgium',
+               '362': 'Belize',
+               '7': 'Benin',
+               '363': 'Bermuda',
+               '131012': 'Bhutan',
+               '1650': 'Bolivia',
+               '759': 'Bosnia',
+               '8': 'Botswana',
+               '1651': 'Brazil',
+               '129517': 'British Virgin Islands',
+               '109': 'Brunei',
+               '760': 'Bulgaria',
+               '9': 'Burkina Faso',
+               '10': 'Burundi',
+               '118': 'Cambodia',
+               '11': 'Cameroon',
+               '364': 'Canada',
+               '12': 'Cape Verde',
+               '365': 'Cayman Islands',
+               '13': 'Central African Republic',
+               '14': 'Chad',
+               '1652': 'Chile',
+               '110': 'China',
+               '138': 'Chinese Taipei',
+               '1653': 'Colombia',
+               '919586': 'Comoros',
+               '49': 'Congo',
+               '1436': 'Cook Islands',
+               '366': 'Costa Rica',
+               '761': 'Croatia',
+               '367': 'Cuba',
+               '762': 'Cyprus',
+               '763': 'Czech Republic',
+               '764': 'Denmark',
+               '15': 'Djibouti',
+               '368': 'Dominica',
+               '142527': 'Dominican Republic',
+               '5626837': 'East Timor',
+               '1654': 'Ecuador',
+               '16': 'Egypt',
+               '370': 'El Salvador',
+               '765': 'England',
+               '17': 'Equatorial Guinea',
+               '129511': 'Eritrea',
+               '766': 'Estonia',
+               '18': 'Ethiopia',
+               '767': 'Faroe Islands',
+               '1437': 'Fiji',
+               '768': 'Finland',
+               '769': 'France',
+               '781': 'FYR Macedonia',
+               '19': 'Gabon',
+               '20': 'Gambia',
+               '770': 'Georgia',
+               '771': 'Germany',
+               '21': 'Ghana',
+               '772': 'Greece',
+               '371': 'Grenada',
+               '129508': 'Guam',
+               '373': 'Guatemala',
+               '22': 'Guinea',
+               '23': 'Guinea-Bissau',
+               '374': 'Guyana',
+               '375': 'Haiti',
+               '784': 'Holland',
+               '376': 'Honduras',
+               '111': 'Hong Kong',
+               '773': 'Hungary',
+               '774': 'Iceland',
+               '112': 'India',
+               '113': 'Indonesia',
+               '114': 'Iran',
+               '115': 'Iraq',
+               '789': 'Ireland',
+               '775': 'Israel',
+               '776': 'Italy',
+               '24': 'Ivory Coast',
+               '377': 'Jamaica',
+               '116': 'Japan',
+               '117': 'Jordan',
+               '119': 'Kazakhstan',
+               '25': 'Kenya',
+               '120': 'Kuwait',
+               '121': 'Kyrgyzstan',
+               '122': 'Laos',
+               '777': 'Latvia',
+               '123': 'Lebanon',
+               '26': 'Lesotho',
+               '27': 'Liberia',
+               '28': 'Libya',
+               '778': 'Liechtenstein',
+               '779': 'Lithuania',
+               '780': 'Luxembourg',
+               '124': 'Macau',
+               '29': 'Madagascar',
+               '30': 'Malawi',
+               '125': 'Malaysia',
+               '126': 'Maldives',
+               '31': 'Mali',
+               '782': 'Malta',
+               '32': 'Mauritania',
+               '33': 'Mauritius',
+               '379': 'Mexico',
+               '783': 'Moldova',
+               '129505': 'Mongolia',
+               '62002127': 'Montenegro',
+               '129520': 'Montserrat',
+               '34': 'Morocco',
+               '35': 'Mozambique',
+               '127': 'Myanmar',
+               '785': 'N. Ireland',
+               '36': 'Namibia',
+               '128': 'Nepal',
+               '380': 'Netherlands Antilles',
+               '129532': 'New Caledonia',
+               '1438': 'New Zealand',
+               '381': 'Nicaragua',
+               '37': 'Niger',
+               '38': 'Nigeria',
+               '129': 'North Korea',
+               '786': 'Norway',
+               '130': 'Oman',
+               '131': 'Pakistan',
+               '1662': 'Palestine',
+               '382': 'Panama',
+               '1439': 'Papua New Guinea',
+               '1655': 'Paraguay',
+               '1656': 'Peru',
+               '141': 'Philippines',
+               '787': 'Poland',
+               '788': 'Portugal',
+               '383': 'Puerto Rico',
+               '132': 'Qatar',
+               '53': 'Republic of Congo',
+               '790': 'Romania',
+               '791': 'Russia',
+               '39': 'Rwanda',
+               '1444': 'Samoa',
+               '792': 'San Marino',
+               '40': 'Sao Tome & Principe',
+               '133': 'Saudi Arabia',
+               '793': 'Scotland',
+               '41': 'Senegal',
+               '802': 'Serbia',
+               '42': 'Seychelles',
+               '43': 'Sierra Leone',
+               '134': 'Singapore',
+               '794': 'Slovakia',
+               '795': 'Slovenia',
+               '1440': 'Solomon Islands',
+               '44': 'Somalia',
+               '45': 'South Africa',
+               '135': 'South Korea',
+               '796': 'Spain',
+               '136': 'Sri Lanka',
+               '385': 'St Kitts & Nevis',
+               '384': 'St Lucia',
+               '386': 'St Vincent',
+               '46': 'Sudan',
+               '387': 'Surinam',
+               '47': 'Swaziland',
+               '797': 'Sweden',
+               '798': 'Switzerland',
+               '137': 'Syria',
+               '1441': 'Tahiti',
+               '139': 'Tajikistan',
+               '48': 'Tanzania',
+               '140': 'Thailand',
+               '50': 'Togo',
+               '1442': 'Tonga',
+               '389': 'Trinidad & Tobago',
+               '51': 'Tunisia',
+               '799': 'Turkey',
+               '142': 'Turkmenistan',
+               '129526': 'Turks and Caicos Islands',
+               '143': 'United Arab Emirates',
+               '390': 'USA',
+               '52': 'Uganda',
+               '800': 'Ukraine',
+               '1657': 'Uruguay',
+               '129523': 'US Virgin Islands',
+               '144': 'Uzbekistan',
+               '1443': 'Vanuatu',
+               '1658': 'Venezuela',
+               '145': 'Vietnam',
+               '801': 'Wales',
+               '146': 'Yeme',
+               '54': 'Zambia',
+               '55': 'Zimbabwe'}
