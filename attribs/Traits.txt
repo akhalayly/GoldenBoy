@@ -17,9 +17,9 @@ Defenders:
 	Centre-Back Stopper (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, aggression, bravery
 	Centre-Back Cover (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, anticipation, acceleration, pace
 	Centre-Back Defend (CB) , Heading, Marking, Tackling, Composure, Concentration, Decisions, Determination, Positioning, Jumping, Strength, teamwork
-	Ball playing defender Stopper (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, aggression, bravery
-	Ball playing defender Cover (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, anticipation, acceleration, pace
-	Ball playing defender Defend (CB) , Aerial Ability, Command of Area, Communication, Handling, One on Ones, Reflexes, Bravery, Composure, Concentration, Decisions, Positioning, Agility, teamwork
+	Ball playing defender Stopper (CB) , Heading, Marking, Passing, Tackling, Technique, Composure, Concentration, Creativity, Decisions, Determination, Positioning, Jumping, Strength, aggression, bravery
+	Ball playing defender Cover (CB) , Heading, Marking, Passing, Tackling, Technique, Composure, Concentration, Creativity, Decisions, Determination, Positioning, Jumping, Strength, anticipation, acceleration, pace
+	Ball playing defender Defend (CB) , Heading, Marking, Passing, Tackling, Technique, Composure, Concentration, Creativity, Decisions, Determination, Positioning, Jumping, Strength, teamwork
 	Limited Defender Stopper (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, aggression, bravery
 	Limited Defender Cover (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, anticipation, acceleration, pace
 	Limited Defender Defend (CB) , Heading, Marking, Tackling, Determination, Positioning, Jumping, Strength, teamwork
