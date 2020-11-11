@@ -2,7 +2,8 @@ TargetManSupport = ["First Touch", "Heading", "Aggression", "Bravery", "Determin
                     "Jumping", "Strength", "Long shots", "Dirtiness", "Height_2012"]
 
 TargetManAttack = ["First Touch", "Heading", "Aggression", "Bravery", "Determination", "Teamwork", "Work Rate",
-                   "Jumping", "Strength", "Finishing", "Anticipation", "Composure", "Vision", "Dirtiness", "Height_2012"]
+                   "Jumping", "Strength", "Finishing", "Anticipation", "Composure", "Vision", "Dirtiness",
+                   "Height_2012"]
 
 Poacher = ["Dribbling", "Finishing", "First Touch", "Anticipation", "Composure", "Off The Ball", "Acceleration",
            "Agility", "Balance", "Pace"]
@@ -56,22 +57,23 @@ CentreBackStopper = ["Heading", "Marking", "Tackling", "Composure", "Concentrati
                      "Height_2012"]
 
 CentreBackCover = ["Heading", "Marking", "Tackling", "Composure", "Concentration", "Decisions", "Determination",
-                   "Positioning", "Jumping", "Strength", "anticipation", "acceleration", "pace", "Dirtiness", "Height_2012"]
+                   "Positioning", "Jumping", "Strength", "anticipation", "acceleration", "pace", "Dirtiness",
+                   "Height_2012"]
 
 CentreBackDefend = ["Heading", "Marking", "Tackling", "Composure", "Concentration", "Decisions", "Determination",
                     "Positioning", "Jumping", "Strength", "teamwork", "Dirtiness", "Height_2012"]
 
-BallPlayingDefenderStopper = ["Aerial Ability", "Command of Area", "Communication", "Handling", "One on Ones",
-                              "Reflexes", "Bravery", "Composure", "Concentration", "Decisions", "Positioning",
-                              "Agility", "aggression", "bravery"]
+BallPlayingDefenderStopper = ["Heading", "Marking", "Passing", "Tackling", "Technique", "Composure", "Concentration",
+                              "Creativity", "Decisions", "Determination", "Positioning", "Jumping", "Strength",
+                              "Aggression", "Bravery"]
 
-BallPlayingDefenderCover = ["Aerial Ability", "Command of Area", "Communication", "Handling", "One on Ones",
-                            "Reflexes", "Bravery", "Composure", "Concentration", "Decisions", "Positioning",
-                            "Agility", "anticipation", "acceleration", "pace"]
+BallPlayingDefenderCover = ["Heading", "Marking", "Passing", "Tackling", "Technique", "Composure", "Concentration",
+                            "Creativity", "Decisions", "Determination", "Positioning", "Jumping", "Strength",
+                            "anticipation", "acceleration", "pace"]
 
-BallPlayingDefenderDefend = ["Aerial Ability", "Command of Area", "Communication", "Handling", "One on Ones",
-                             "Reflexes", "Bravery", "Composure", "Concentration", "Decisions", "Positioning",
-                             "Agility", "teamwork"]
+BallPlayingDefenderDefend = ["Heading", "Marking", "Passing", "Tackling", "Technique", "Composure", "Concentration",
+                             "Creativity", "Decisions", "Determination", "Positioning", "Jumping", "Strength",
+                             "teamwork"]
 
 LimitedDefenderStopper = ["Heading", "Marking", "Tackling", "Determination", "Positioning", "Jumping",
                           "Strength", "aggression", "bravery", "Dirtiness", "Height_2012"]
@@ -89,7 +91,8 @@ ShotStoppingGoalkeeper = ["Aerial Ability", "Command of Area", "Communication", 
 SweeperKeeper = ["First touch", "Rushing Out", "Anticipation", "Vision", "Acceleration", "Pace", "Height_2012"]
 
 DefensiveMidfielderDefend = ["Marking", "Tackling", "Concentration", "Decisions", "Positioning", "Teamwork",
-                             "Work Rate", "Acceleration", "Stamina", "Strength", "concentration", "Dirtiness", "Height_2012"]
+                             "Work Rate", "Acceleration", "Stamina", "Strength", "concentration", "Dirtiness",
+                             "Height_2012"]
 
 DefensiveMidfielderSupport = ["Marking", "Tackling", "Concentration", "Decisions", "Positioning", "Teamwork",
                               "Work Rate", "Acceleration", "Stamina", "Strength", "passing", "Dirtiness", "Height_2012"]
@@ -186,7 +189,6 @@ allRoles_Traits = [SweeperKeeper, ShotStoppingGoalkeeper, CentreBackCover, Centr
                    AttackingMidfielder, WideMidfielder, InsideForwardAttack, InsideForwardSupport, Winger,
                    TargetManSupport, TargetManAttack, Poacher, CompleteForward, AdvancedForward,
                    DeepLyingForwardSupport, DeepLyingForwardAttack]
-
 
 Positive_Traits = ["Consistency", "ImportantMatches", "Adaptability", "Ambition", "Pressure", "Professional",
                    "Temperament", "CA"]
