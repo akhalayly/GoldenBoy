@@ -66,6 +66,8 @@ def scoreByRole(playerRow, traitsIndexes):
 
 def findBestPosition(playerRow):
     allScores = []
+    if playerRow[1] == "Thiago Veras":
+        print("")
     for role, roleName in zip(posT.allRoles_Traits, posT.allRoles):
         allScores.append((roleName, scoreByRole(playerRow, roleTraitIndexesFinder(role, posT.DatasetColumns, year_2012))))
     best_pos = max(allScores, key=itemgetter(1))[0]
