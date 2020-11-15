@@ -1,0 +1,92 @@
+Success meter for each pos:
+	for each pos, we'll decide later the ratio between each taken success condition.
+	Goalkeeper:
+	clean sheets, goals conceded, market value, CA , attribs
+	********** check if position is GK for TM
+	goals conceded: Maximum(20 - 5*((number of goals conceded >=0 /matches( atleast 10 ))),0)
+	Clean sheets:  Minimum(35 * Cleans_Sheets / Matches(atleast 10),20)
+	market value: 6-10 | 0-1.5m, 11-15 | 1.5m-15m, 16-20 | 15m-100m
+	CA: CA/10
+	attribs: after writing down weights (decide if to use attibs by role / pos)
+	to calc success meter, we add all the above and divide by number of used cols
+
+	CB: 
+	market value: 6-10 | 0-4m, 11-15 | 4m-20m, 16-20 | 20m-100m
+
+	goals scored: 10 + (goals scored / number of games played (>10)) * 50
+
+	CA: CA / 10
+
+	attribs: later
+
+	FBs:
+
+	market value: 6-10 | 0-1.5m, 11-15 | 1.5m-15m, 16-20 | 15m-100m
+
+	goals scored: 10 + (goals scored / number of games played (>10)) * 23
+
+	assists: 10 + (goals scored / number of games played (>10)) * 23
+
+	CA: CA / 10
+
+	attribs: later
+
+	CDMs:
+
+	market value: 6-10 | 0-3m, 11-15 | 3m-15m, 16-20 | 15m-100m
+
+	goals scored: 10 + (goals scored / number of games played (>10)) * 23
+
+	assists: 10 + (goals scored / number of games played (>10)) * 30
+
+	CA: CA / 10
+
+	attribs: later
+
+	CMs:
+
+	market value: 6-10 | 0-3m, 11-15 | 3m-12m, 16-20 | 12m-100m
+
+	goals scored: 10 + (goals scored / number of games played (>10)) * 20
+
+	assists: 10 + (goals scored / number of games played (>10)) * 20
+
+	CA: CA / 10
+
+	attribs: later
+
+	CAMs:
+
+	market value: 6-10 | 0-4m, 11-15 | 4m-20m, 16-20 | 20m-130m
+
+	goals scored: Minimum(10 + (goals scored / number of games played (>10)) * 15,20)
+
+	assists: 10 + (goals scored / number of games played (>10)) * 17
+
+	CA: CA / 10
+
+	attribs: later
+
+	Wingers:
+
+	market value: 6-10 | 0-4m, 11-15 | 4m-20m, 16-20 | 20m-130m
+
+	goals scored: Minimum(10 + (goals scored / number of games played (>10)) * 15,20)
+
+	assists: 10 + (goals scored / number of games played (>10)) * 17
+
+	CA: CA / 10
+
+	attribs: later
+
+	Strikers:
+
+	market value: 6-10 | 0-4m, 11-15 | 4m-18m, 16-20 | 18m-120m
+
+	goals scored: Minimum(10 + (goals scored / number of games played (>10)) * 15,20)
+
+	assists: 10 + (goals scored / number of games played (>10)) * 20
+
+	CA: CA / 10
+
+	attribs: later
