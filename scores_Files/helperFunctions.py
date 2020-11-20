@@ -78,24 +78,39 @@ def findBestRole(playerRow, year, cols=posT.DatasetColumns, roles=posT.allRoles_
     return best_role
 
 
-def successMeter(playerRow, columns, marketValueRange1, marketValueRange2, marketValueRange3, goalsScoredParm,
-                 assistsParam, weightsDict, roles, rolesNames):
+def getRightLeftFoot(playerRow, columns):
+    RightFoot2018 = playerRow[roleTraitIndexesFinder(["Phy.RightFoot"], columns, year_2018)[0]]
+    LeftFoot2018 = playerRow[roleTraitIndexesFinder(["Phy.LeftFoot"], columns, year_2018)[0]]
+    RightFoot2012 = playerRow[roleTraitIndexesFinder(["Phy.RightFoot"], columns, year_2012)[0]]
+    LeftFoot2012 = playerRow[roleTraitIndexesFinder(["Phy.LeftFoot"], columns, year_2012)[0]]
+    RightFoot = RightFoot2018 if RightFoot2018 > 0 else RightFoot2012
+    LeftFoot = LeftFoot2018 if LeftFoot2018 > 0 else LeftFoot2012
+    return RightFoot, LeftFoot
+
+
+def successMeter(playerRow, columns, marketValueRange1, marketValueRange2, marketValueRange3, weightsDict, roles,
+                 rolesNames):
+    TransferMarketPosition = playerRow[roleTraitIndexesFinder(["position_2012"], columns, "")[0]]
+    RightFoot, LeftFoot = getRightLeftFoot(playerRow, columns)
+    goalsScoredParm, assistsParam = getGoalAssistParams(TransferMarketPosition)
     playerMarketValue = playerRow[roleTraitIndexesFinder(["Market Value"], columns, year_2018)[0]]
     playerGoalsScored = playerRow[roleTraitIndexesFinder(["Goals_Scored"], columns, "")[0]]
     playerAssists = playerRow[roleTraitIndexesFinder(["Assists"], columns, "")[0]]
     playerGamesPlayed = playerRow[roleTraitIndexesFinder(["Games_Played"], columns, "")[0]]
-    currentAbility = playerRow[roleTraitIndexesFinder(["CA"], columns, year_2018)[0]]
+    currentAbility2012 = playerRow[roleTraitIndexesFinder(["CA"], columns, year_2012)[0]]
+    currentAbility2018 = playerRow[roleTraitIndexesFinder(["CA"], columns, year_2018)[0]]
+    potentialAbility2012 = playerRow[roleTraitIndexesFinder(["PA"], columns, year_2012)[0]]
     attribsScore = findBestRole(playerRow, year_2018, columns, roles, rolesNames)[1]
     marketSuccessScore = marketSuccess(playerMarketValue, marketValueRange1, marketValueRange2, marketValueRange3)
-    weightsConsidered = 0
-    sumOfComponents = 0
+    weightsConsidered = weightsDict['weakFoot']
+    sumOfComponents = weightsDict['weakFoot'] * (RightFoot + LeftFoot) / 2
     if attribsScore > -1:
         sumOfComponents += weightsDict['attribs'] * attribsScore
         weightsConsidered += weightsDict['attribs']
-    if marketSuccessScore >= 0:
+    if marketSuccessScore >= 0 and TransferMarketPosition != 'Goalkeeper':
         sumOfComponents += weightsDict['market'] * marketSuccessScore
         weightsConsidered += weightsDict['market']
-    if playerGamesPlayed >= 10:
+    if playerGamesPlayed >= 10 and goalsScoredParm > 0:
         sumOfComponents += min((10 + (playerGoalsScored / playerGamesPlayed) * goalsScoredParm) * weightsDict['goals'],
                                20 * weightsDict['goals'])
         weightsConsidered += weightsDict['goals']
@@ -103,8 +118,12 @@ def successMeter(playerRow, columns, marketValueRange1, marketValueRange2, marke
         sumOfComponents += min((10 + (playerAssists / playerGamesPlayed) * assistsParam) * weightsDict['assists'],
                                20 * weightsDict['assists'])
         weightsConsidered += weightsDict['assists']
-    if currentAbility > 0:
-        sumOfComponents += (currentAbility / 10) * weightsDict['CA']
+    if currentAbility2018 > 0:
+        sumOfComponents += (currentAbility2018 / 10) * weightsDict['CA']
+        weightsConsidered += weightsDict['CA']
+    else:
+        improvement = potentialAbility2012 - currentAbility2012
+        sumOfComponents += (((potentialAbility2012 - (improvement * 0.75)) / 10) * weightsDict['CA'])
         weightsConsidered += weightsDict['CA']
     if weightsConsidered == 0:
         return -1
@@ -157,48 +176,73 @@ def marketSuccess(marketValue, marketValueRange1, marketValueRange2, marketValue
 def getScoreByPos(playerRow, cols, pos):
     if pos == "GKs":
         return successMeterGK(playerRow, cols, 1.5, 15, 100,
-                              {'market': 0.2, 'conceded': 0.2, 'CA': 0.2, 'clean': 0.2, 'attribs': 0.2})
+                              {'market': 0.2, 'conceded': 0.2, 'CA': 0.15, 'clean': 0.15, 'attribs': 0.3})
     elif pos == 'CBs':
-        return successMeter(playerRow, cols, 4, 20, 100, 50, 0,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 4, 20, 100,
+                            {'market': 0.35, 'goals': 0.1, 'CA': 0.15, 'assists': 0.05, 'attribs': 0.35, 'weakFoot': 0},
                             posT.CBs_Traits,
                             posT.CBs)
     elif pos == 'RBs':
-        return successMeter(playerRow, cols, 1.5, 15, 100, 23, 23,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 1.5, 15, 100,
+                            {'market': 0.225, 'goals': 0.05, 'CA': 0.15, 'assists': 0.25, 'attribs': 0.275,
+                             'weakFoot': 0.05},
                             posT.FBs_Traits,
                             posT.FBs)
     elif pos == "LBs":
-        return successMeter(playerRow, cols, 1.5, 15, 100, 23, 23,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 1.5, 15, 100,
+                            {'market': 0.225, 'goals': 0.05, 'CA': 0.15, 'assists': 0.25, 'attribs': 0.275,
+                             'weakFoot': 0.05},
                             posT.FBs_Traits,
                             posT.FBs)
     elif pos == "CDMs":
-        return successMeter(playerRow, cols, 3, 15, 100, 23, 30,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 3, 15, 100,
+                            {'market': 0.3, 'goals': 0.05, 'CA': 0.15, 'assists': 0.2, 'attribs': 0.3, 'weakFoot': 0},
                             posT.CDMs_Traits,
                             posT.CDMs)
     elif pos == "CMs":
-        return successMeter(playerRow, cols, 3, 12, 100, 20, 20,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 3, 12, 100,
+                            {'market': 0.225, 'goals': 0.1, 'CA': 0.15, 'assists': 0.2, 'attribs': 0.275,
+                             'weakFoot': 0.05},
                             posT.CMs_Traits,
                             posT.CMs)
     elif pos == "CAMS":
-        return successMeter(playerRow, cols, 4, 20, 130, 15, 17,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 4, 20, 130,
+                            {'market': 0.2, 'goals': 0.15, 'CA': 0.15, 'assists': 0.225, 'attribs': 0.2,
+                             'weakFoot': 0.075},
                             posT.CAMs_Traits,
                             posT.CAMs)
     elif pos == "Strikers":
-        return successMeter(playerRow, cols, 4, 18, 120, 15, 20,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 4, 18, 120,
+                            {'market': 0.225, 'goals': 0.25, 'CA': 0.15, 'assists': 0.05, 'attribs': 0.225, 'weakFoot': 0.1},
                             posT.Strikers_Traits, posT.Strikers)
     elif pos == "LMs":
-        return successMeter(playerRow, cols, 4, 20, 130, 15, 17,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 4, 20, 130,
+                            {'market': 0.2, 'goals': 0.2, 'CA': 0.15, 'assists': 0.2, 'attribs': 0.2,
+                             'weakFoot': 0.05},
                             posT.Wingers_Traits, posT.Wingers)
     elif pos == "RMs":
-        return successMeter(playerRow, cols, 4, 20, 130, 15, 17,
-                            {'market': 0.2, 'goals': 0.2, 'CA': 0.2, 'assists': 0.2, 'attribs': 0.2},
+        return successMeter(playerRow, cols, 4, 20, 130,
+                            {'market': 0.2, 'goals': 0.2, 'CA': 0.15, 'assists': 0.2, 'attribs': 0.2,
+                             'weakFoot': 0.05},
                             posT.Wingers_Traits, posT.Wingers)
     else:
         return -1
+
+
+def getGoalAssistParams(posTM):
+    return {
+        'Midfielder - Attacking Midfield': (15, 17),
+        'Forward - Right Winger': (15, 17),
+        'Defender - Left-Back': (45, 35),
+        'Defender - Centre-Back': (50, 0),
+        'Forward - Left Winger': (15, 17),
+        'Midfielder - Left Midfield': (15, 17),
+        'Midfielder - Central Midfield': (20, 20),
+        'Midfielder - Defensive Midfield': (23, 30),
+        'Defender - Right-Back': (45, 35),
+        'Forward - Second Striker': (15, 20),
+        'Forward - Centre-Forward': (15, 20),
+        'Midfielder - Right Midfield': (15, 17),
+        'Goalkeeper': (-1, -1),
+        '-1': (-1, -1)
+    }[posTM]
