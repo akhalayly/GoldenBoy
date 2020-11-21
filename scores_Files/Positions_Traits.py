@@ -194,9 +194,9 @@ allRoles_Traits = [SweeperKeeper, ShotStoppingGoalkeeper, CentreBackCover, Centr
                    DeepLyingForwardSupport, DeepLyingForwardAttack]
 
 Positive_Traits = ["Consistency", "ImportantMatches", "Adaptability", "Ambition", "Pressure", "Professional",
-                   "Temperament", "CA"]
+                   "Temperament"]
 Negative_Traits = ["InjuryProness"]
-General_Info = ["Name", "NationID"]
+General_Info = ["NationID_2012", "Market Value_2012(Pounds)", "CA_2012", "Phy.RightFoot_2012", "Phy.LeftFoot_2012"]
 
 DatasetColumns = ["Name_2012", "UID_2012", "NationID_2012", "Born_2012", "Age_2012", "IntCaps_2012", "IntGoals_2012",
                   "WorldReputation_2012", "HomeReputation_2012", "CurrentReputation_2012", "PA_2012", "CA_2012",

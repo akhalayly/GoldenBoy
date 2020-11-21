@@ -242,7 +242,9 @@ def getGoalAssistParams(posTM):
         'Defender - Right-Back': (45, 35),
         'Forward - Second Striker': (15, 20),
         'Forward - Centre-Forward': (15, 20),
+        'Forward': (15, 20),
         'Midfielder - Right Midfield': (15, 17),
+        'Midfielder': (20, 20),
         'Goalkeeper': (-1, -1),
         '-1': (-1, -1)
     }[posTM]
