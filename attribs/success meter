@@ -1,17 +1,21 @@
 Success meter for each pos:
 	for each pos, we'll decide later the ratio between each taken success condition.
 	Goalkeeper:
-	clean sheets, goals conceded, market value, CA , attribs
+
 	********** check if position is GK for TM
+
 	goals conceded: Maximum(20 - 5*((number of goals conceded >=0 /matches( atleast 10 ))),0)
+
 	Clean sheets:  Minimum(35 * Cleans_Sheets / Matches(atleast 10),20)
+
 	market value: 6-10 | 0-1.5m, 11-15 | 1.5m-15m, 16-20 | 15m-100m
 	CA: CA/10
+
 	attribs: after writing down weights (decide if to use attibs by role / pos)
 	to calc success meter, we add all the above and divide by number of used cols
 
 	CB: 
-	market value: 6-10 | 0-4m, 11-15 | 4m-20m, 16-20 | 20m-100m
+	market value: 6-10 | 0-4m, 10-15 | 4m-20m, 15-20 | 20m-100m
 
 	goals scored: 10 + (goals scored / number of games played (>10)) * 50
 
@@ -41,7 +45,7 @@ Success meter for each pos:
 
 	CA: CA / 10
 
-	attribs: later
+	attribs (bestRoleScore): later
 
 	CMs:
 
@@ -90,3 +94,7 @@ Success meter for each pos:
 	CA: CA / 10
 
 	attribs: later
+
+
+
+	successfulPlayer: 14
