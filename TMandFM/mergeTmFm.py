@@ -28,7 +28,7 @@ if __name__ == "__main__":
         NamesListTM = [name[0] for name in NamesTM.values]
         matched_list = []
         for FMname in NamesListFM:
-            wantedString = difflib.get_close_matches(FMname, NamesListTM, 1, 0.75)
+            wantedString = difflib.get_close_matches(FMname, NamesListTM, 1, 0.85)
             if len(wantedString) == 0:
                 wantedString = [""]
             matched_list.append((FMname, wantedString[0]))
